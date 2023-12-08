@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="css\footer.css">
+    <style>
+        header {
+            font-size: 50px; /* Set the font size for the header */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 15px; /* Increase the margin between list items */
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search input {
+            font-size: 16px; /* Increase the font size for the search input */
+            margin-right: 20px; /* Adjust the margin between input and button */
+        }
+
+        .search button {
+            font-size: 20px; /* Increase the font size for the search button */
+        }
+
+        .footer-social {
+            flex: 1;
+            text-align: right;
+        }
+
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .footer-social ul li {
+            margin-right: 5px;
+        }
+
+        .footer-social img {
+            width: 20px; /* Increase the size of social media icons */
+            height: 20px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .cart {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .checkout-btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    <ul>
+         <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" target="_blank">About</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+          <li><a href="feedback.html" target="_blank">Feedback</a></li>
+      
+    </ul>
+      <div class="search">
+          <input type="text" name="" id="" placeholder="Search Here">
+          <button class="btn">Search</button>
+      </div>
+      <ul>
+         <li><a href="signin.html" target="_blank">SignIn</a></li>
+         <li><a href="AddCart.html" target="_blank">Cart</a></li>
+      </ul>
+      <div class="footer-social" style="flex: 1; text-align: right;">
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: flex-end;">
+            <li style="margin-right: 10px;">
+                <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">
+                    <img src="img\Logo\fb.webp" alt="Facebook" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+            <li style="margin-right: 10px;">
+                <a href="https://twitter.com/your-twitter-account" target="_blank">
+                    <img src="img\Logo\twitter.webp" alt="Twitter" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img\Logo\instagram.webp" alt="Instagram" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+        </ul>
+      </div>
+    
+  </nav> 
+
+</header>
+<section>
+    <div class="cart">
+        <div class="cart-item">
+            <span>Product 1</span>
+            <span>$19.99</span>
+        </div>
+        <div class="cart-item">
+            <span>Product 2</span>
+            <span>$29.99</span>
+        </div>
+        <!-- Add more cart items dynamically based on user selection -->
+
+        <a href="#" class="checkout-btn" onclick="openCheckout()">Proceed to Checkout</a>
+    </div>
+    <div class="cart">
+        <div class="cart-item">
+            <span>Product 1</span>
+            <span>$19.99</span>
+        </div>
+        <div class="cart-item">
+            <span>Product 2</span>
+            <span>$29.99</span>
+        </div>
+        <!-- Add more cart items dynamically based on user selection -->
+
+        <a href="#" class="checkout-btn" onclick="openCheckout()">Proceed to Checkout</a>
+    </div>
+</section>
+
+<script>
+    function openCheckout() {
+        window.open('checkout.html', '_blank');
+    }
+</script>
+
+
+
+<footer>
+    <div class="footer" style="background-color: #007bff; color: white; padding: 20px 0; text-align: center;">
+
+        <div class="footer-content" style="margin-bottom: 10px;">
+            <div class="footer-section" style="margin-right: 300px;">
+                <h3><span style="color: black;">Shop</span></h3><br>
+                <h4>
+                    <ul>
+                        <li><a href="home.html">Hpme</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Offers</a></li>
+                    </ul>
+                </h4>
+            </div>
+
+            <div class="footer-section" style="margin-right: 300px;">
+                <h3><span style="color: black;">Help</span></h3><br>
+                <h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </h4>
+            </div>
+
+            <div class="footer-section" style="margin-right: 300px;">
+                <h3><span style="color: black;">Company</span></h3><br>
+                <h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </h4>
+            </div>
+
+            <div class="footer-social" style="flex: 1; text-align: right;">
+                <ul style="list-style: none; padding: 0; display: flex; justify-content: flex-end;">
+                    <li style="margin-right: 10px;">
+                        <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">
+                            <img src="img\Logo\fb.webp" alt="Facebook" style="width: 30px; height: 30px;">
+                        </a>
+                    </li>
+                    <li style="margin-right: 10px;">
+                        <a href="https://twitter.com/your-twitter-account" target="_blank">
+                            <img src="img\Logo\twitter.webp" alt="Twitter" style="width: 30px; height: 30px;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="img\Logo\instagram.webp" alt="Instagram" style="width: 30px; height: 30px;">
+                        </a>
+                    </li>
+                </ul><br>
+            </div>
+
+        </div><br>
+
+        <div class="footer-text" style="margin-top: 20px;">
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

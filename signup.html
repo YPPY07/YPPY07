@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/utils.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="css\footer.css">
+        <style>
+            header {
+                font-size: 50px; /* Set the font size for the header */
+            }
+    
+            nav ul {
+                list-style: none;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            nav ul li {
+                margin-right: 15px; /* Increase the margin between list items */
+            }
+    
+            .search {
+                display: flex;
+                align-items: center;
+            }
+    
+            .search input {
+                font-size: 16px; /* Increase the font size for the search input */
+                margin-right: 20px; /* Adjust the margin between input and button */
+            }
+    
+            .search button {
+                font-size: 20px; /* Increase the font size for the search button */
+            }
+    
+            .footer-social {
+                flex: 1;
+                text-align: right;
+            }
+    
+            .footer-social ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+    
+            .footer-social ul li {
+                margin-right: 5px;
+            }
+    
+            .footer-social img {
+                width: 20px; /* Increase the size of social media icons */
+                height: 20px;
+            }
+        </style>
+    </head>
+    
+    <body>
+      <header>
+        <nav>
+        <ul>
+             <li><a href="home.html">Home</a></li>
+              <li><a href="about.html" target="_blank">About</a></li>
+              <li><a href="contact.html" target="_blank">Contact</a></li>
+              <li><a href="feedback.html" target="_blank">Feedback</a></li>
+          
+        </ul>
+          <div class="search">
+              <input type="text" name="" id="" placeholder="Search Here">
+              <button class="btn">Search</button>
+          </div>
+          <ul>
+             <li><a href="signin.html" target="_blank">SignIn</a></li>
+             <li><a href="AddCart.html" target="_blank">Cart</a></li>
+          </ul>
+          <div class="footer-social" style="flex: 1; text-align: right;">
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: flex-end;">
+                <li style="margin-right: 10px;">
+                    <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">
+                        <img src="img\Logo\fb.webp" alt="Facebook" style="width: 30px; height: 30px;">
+                    </a>
+                </li>
+                <li style="margin-right: 10px;">
+                    <a href="https://twitter.com/your-twitter-account" target="_blank">
+                        <img src="img\Logo\twitter.webp" alt="Twitter" style="width: 30px; height: 30px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img\Logo\instagram.webp" alt="Instagram" style="width: 30px; height: 30px;">
+                    </a>
+                </li>
+            </ul>
+          </div>
+        
+      </nav> 
+    
+    </header>
+    
+  
+
+    <div style="background-color: #fff; padding: 150px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 400px; text-align: center; margin: auto;">
+        <h1>Sign Up</h1><br>
+      <form style="display: flex; flex-direction: column;" onsubmit="return validateForm()">
+  
+  
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;">
+  
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" style="padding: 8px; margin: 8px 0; width: 100%; box-sizing: border-box;" required>
+  
+        <button type="submit" style="background-color: #4caf50; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">Sign Up</button>
+  
+        <p style="margin-top: 15px;">Already have an account? <a href="signin.html" style="color: #4caf50;">Sign In</a></p>
+  
+      </form>
+  
+    </div>
+  
+    <script>
+      function validateForm() {
+        var mobileNumber = document.getElementById("mobileNumber").value;
+        var email = document.getElementById("email").value;
+  
+        // Simple email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Invalid email address");
+          return false;
+        }
+  
+        // Simple mobile number validation (10 digits)
+        var mobileRegex = /^\d{10}$/;
+        if (!mobileRegex.test(mobileNumber)) {
+          alert("Invalid mobile number");
+          return false;
+        }
+  
+        return true;
+      }
+    </script>
+<!--footer-->
+<div class="footer": style="background-color: #007bff; color: white; padding: 20px 0; text-align: center;">
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3><span style="color: black;">Shop</span></h3><br>
+          <h4>
+           <ul>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Offers</a></li>
+           </ul>
+          </h4>
+      </div>
+      <div class="footer-section">
+          <h3><span style="color: black;">Help</span></h3><br>
+          <h4>
+          <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Track Order</a></li>
+          </ul>
+        </h4>
+      </div>
+      <div class="footer-section">
+          <h3><span style="color: black;">Company</span></h3><br>
+          <h4>
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </h4>
+      </div>
+      <div class="footer-social" style="flex: 1; text-align: right;">
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: flex-end;">
+            <li style="margin-right: 10px;">
+                <a href="https://www.facebook.com/your-facebook-page-url" target="_blank">
+                    <img src="img\Logo\fb.webp" alt="Facebook" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+            <li style="margin-right: 10px;">
+                <a href="https://twitter.com/your-twitter-account" target="_blank">
+                    <img src="img\Logo\twitter.webp" alt="Twitter" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img\Logo\instagram.webp" alt="Instagram" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+        </ul><br>
+      </div>
+      
+     <br>
+  </div><br>
+  <div class="footer-text">
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </div>
+</div>
+
+
+</body>
+
+</html>
